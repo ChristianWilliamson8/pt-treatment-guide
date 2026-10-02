@@ -6,7 +6,7 @@ The cards are general practice notes. Your evaluation, the weight-bearing order,
 
 ## Open it
 
-After it is published, use the GitHub Pages link on your phone or a clinic computer.
+https://christianwilliamson8.github.io/pt-treatment-guide/
 
 On this computer you can also open `index.html` in a browser. Search, category buttons, and print work without a server.
 
