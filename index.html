@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c5c56">
+  <title>PT Treatment Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">PT</span>
+      <div>
+        <h1>Treatment guide</h1>
+        <p>Quick cards for common diagnoses. Your exam and the physician order win.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <label class="search">
+      <span class="sr-only">Search diagnoses</span>
+      <input id="search" type="search" placeholder="Search a diagnosis, body region, or keyword" autocomplete="off">
+    </label>
+    <div id="chips" class="chips" role="tablist" aria-label="Categories"></div>
+  </div>
+
+  <main class="layout">
+    <aside class="list-panel" aria-label="Diagnoses">
+      <p id="result-count" class="result-count"></p>
+      <div id="list" class="diag-list"></div>
+    </aside>
+    <article id="card" class="card" aria-live="polite"></article>
+  </main>
+
+  <script src="data/diagnoses.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

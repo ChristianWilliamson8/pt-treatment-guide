@@ -1,0 +1,379 @@
+:root {
+  --paper: #f3efe6;
+  --card: #fffdf8;
+  --ink: #1a2332;
+  --muted: #5c6570;
+  --line: #e4dacb;
+  --teal: #0c5c56;
+  --teal-deep: #084540;
+  --teal-soft: #e6f3f1;
+  --red: #8f2d2d;
+  --red-soft: #f8ecec;
+  --amber: #8a5a12;
+  --amber-soft: #f8f1e3;
+  --shadow: 0 10px 30px rgba(26, 35, 50, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  line-height: 1.45;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.site-header {
+  padding: 1.1rem 1.25rem 0.4rem;
+}
+
+.brand {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.55rem;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.brand p {
+  margin: 0.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 0.75rem 1.25rem 0.85rem;
+  background: rgba(243, 239, 230, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.search input {
+  width: 100%;
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 0.7rem;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.search input:focus {
+  outline: 2px solid var(--teal);
+  border-color: var(--teal);
+}
+
+.chips {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0.7rem auto 0;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.chip[aria-selected="true"] {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2.5rem;
+  align-items: start;
+}
+
+.list-panel {
+  position: sticky;
+  top: 7.4rem;
+}
+
+.result-count {
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.diag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: calc(100vh - 10rem);
+  overflow: auto;
+}
+
+.diag-btn {
+  text-align: left;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.diag-btn small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.diag-btn[aria-current="true"] {
+  background: var(--card);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.diag-btn:focus-visible,
+.chip:focus-visible,
+.print-btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.15rem 1.2rem 1.3rem;
+  box-shadow: var(--shadow);
+  min-height: 24rem;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.kicker {
+  display: inline-block;
+  background: var(--teal-soft);
+  color: var(--teal-deep);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.card h2 {
+  margin: 0.35rem 0 0.25rem;
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.aliases {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.snapshot {
+  margin: 0.8rem 0 0;
+  font-size: 1.02rem;
+}
+
+.print-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--teal-deep);
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.callout {
+  margin-top: 0.85rem;
+  border-radius: 0.7rem;
+  padding: 0.65rem 0.8rem;
+}
+
+.callout h3,
+.section h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.callout ul,
+.section ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.callout li,
+.section li {
+  margin: 0.18rem 0;
+}
+
+.callout.danger {
+  background: var(--red-soft);
+  color: #5e1d1d;
+}
+
+.callout.danger h3 { color: var(--red); }
+
+.callout.warn {
+  background: var(--amber-soft);
+  color: #5c3d0c;
+}
+
+.callout.warn h3 { color: var(--amber); }
+
+.sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1.2rem;
+  margin-top: 0.95rem;
+}
+
+.section h3 { color: var(--teal-deep); }
+
+.fine-print {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.empty {
+  color: var(--muted);
+  padding: 0.4rem;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .list-panel { position: static; }
+
+  .diag-list {
+    max-height: none;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.3rem;
+  }
+
+  .diag-btn {
+    min-width: 11rem;
+    background: var(--card);
+    border-color: var(--line);
+  }
+
+  .sections { grid-template-columns: 1fr; }
+
+  .card h2 { font-size: 1.35rem; }
+}
+
+@media print {
+  @page { size: letter; margin: 0.4in; }
+
+  body { background: #fff; }
+
+  .site-header,
+  .toolbar,
+  .list-panel,
+  .print-btn { display: none !important; }
+
+  .layout {
+    display: block;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card {
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    min-height: 0;
+  }
+
+  .card h2 { font-size: 15pt; margin-top: 2pt; }
+
+  .snapshot { font-size: 10pt; margin-top: 4pt; }
+
+  .aliases { font-size: 9pt; }
+
+  .callout,
+  .section { break-inside: avoid; }
+
+  .callout { margin-top: 6pt; padding: 5pt 7pt; }
+
+  .sections {
+    grid-template-columns: 1fr 1fr;
+    gap: 6pt 12pt;
+    margin-top: 6pt;
+  }
+
+  .callout li,
+  .section li,
+  .fine-print,
+  .snapshot { font-size: 8.5pt; line-height: 1.25; }
+
+  .callout h3,
+  .section h3 { font-size: 7.5pt; margin-bottom: 1pt; }
+
+  .fine-print { margin-top: 6pt; }
+}
