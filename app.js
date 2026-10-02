@@ -19,6 +19,7 @@ function haystack(item) {
     ...(item.precautions || []),
     ...(item.assess || []),
     ...(item.treat || []),
+    ...(item.options || []),
     ...(item.progress || []),
     ...(item.hep || []),
     ...(item.escalate || []),
@@ -85,10 +86,17 @@ function addList(parent, title, items, className) {
   block.className = className;
   const heading = document.createElement("h3");
   heading.textContent = title;
-  const list = document.createElement("ul");
+  const list = document.createElement(className === "options" ? "ol" : "ul");
   items.forEach((text) => {
     const li = document.createElement("li");
-    li.textContent = text;
+    const split = text.indexOf(": ");
+    if (className === "options" && split > 0) {
+      const name = document.createElement("strong");
+      name.textContent = text.slice(0, split);
+      li.append(name, document.createTextNode(": " + text.slice(split + 2)));
+    } else {
+      li.textContent = text;
+    }
     list.appendChild(li);
   });
   block.append(heading, list);
@@ -133,19 +141,19 @@ function renderCard(item) {
 
   const sections = document.createElement("div");
   sections.className = "sections";
-  addList(sections, "Assess", item.assess, "section");
-  addList(sections, "Treat", item.treat, "section");
+  addList(sections, "Data to collect", item.assess, "section");
   addList(sections, "Progress", item.progress, "section");
   addList(sections, "Home program", item.hep, "section");
-  addList(sections, "When to escalate", item.escalate, "section");
+  addList(sections, "Tell the supervising PT", item.escalate, "section");
 
   const note = document.createElement("p");
   note.className = "fine-print";
-  note.textContent = "Personal reference for a licensed therapist. It does not replace your evaluation, weight-bearing status, surgeon precautions, or the physician order. Stop for red-flag symptoms and send the person for medical care.";
+  note.textContent = "For a PTA carrying out a physical therapist's plan of care. Use only interventions the plan of care already includes. Weight-bearing status, surgeon precautions, and the physician order override this card. For a red flag, a new symptom, or no progress, stop and contact the supervising PT.";
 
   cardEl.append(top, snapshot);
   addList(cardEl, "Red flags", item.redFlags, "callout danger");
   addList(cardEl, "Precautions", item.precautions, "callout warn");
+  addList(cardEl, "Session options", item.options, "options");
   cardEl.append(sections, note);
 }
 

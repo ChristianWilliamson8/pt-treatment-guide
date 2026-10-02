@@ -27,6 +27,13 @@ const DIAGNOSES = [
       "Build walking tolerance plus hip and trunk endurance",
       "Manual therapy can ease short-term pain. Pair it with exercise",
     ],
+    options: [
+      "Direction that eases: 10 reps of the motion that pulls pain toward the spine. Prone press-ups or standing back bends if extension helps. Knees-to-chest if flexion helps. Stop the set if pain travels farther down the leg.",
+      "Walking bout: start at the distance they can finish without a worse next hour. Add 2 to 5 minutes when the next day is acceptable.",
+      "Hip hinge: dowel along the back, 8 to 10 slow reps. Add a light weight only if the hinge stays comfortable the next day.",
+      "Hip and trunk work: bridges, side-lying abduction or a band walk, and bird-dog. Two sets of 8. Skip a drill that clearly flares the back.",
+      "Position changes: stand up at least every 30 to 40 minutes. Practice the lift or sit-to-stand they use at work, with a neutral start.",
+    ],
     progress: [
       "Increase walking time and load when next-day symptoms stay acceptable",
       "Shift from pain-relief drills toward hinge, lift, and work tasks",
@@ -71,6 +78,13 @@ const DIAGNOSES = [
       "Keep the person walking in manageable bouts",
       "Add nerve glides only when irritability is moderate or low",
       "Hip and trunk strength once the leg is settling",
+    ],
+    options: [
+      "Centralizing repeated movement: 10 reps, usually press-ups or standing extension, every few hours. Stop if the leg gets more numb, weaker, or the pain moves farther down.",
+      "Walking bouts: walk until the leg just starts to climb, then rest. Record the distance. Repeat two or three times in the session.",
+      "Nerve slider, only if the leg is moderately irritable and the plan allows it: seated sciatic slider, 10 easy reps, no strong stretch. Skip this if the leg is highly irritable.",
+      "Hip strength once the leg is calmer: bridge and side-lying abduction, two sets of 8, pain in the leg no worse the next day.",
+      "Sitting setup: lumbar support, stand every 20 to 30 minutes. Avoid long slumped sitting early on.",
     ],
     progress: [
       "The first win is less distal pain and better walking",
@@ -117,6 +131,13 @@ const DIAGNOSES = [
       "For arm-dominant pain, use the direction or position that eases the arm",
       "Headache linked to the neck: upper cervical mobility plus postural endurance",
     ],
+    options: [
+      "Easing direction: 10 gentle chin nods, rotations, or retractions in the motion that calms pain. Stop if arm symptoms spread farther from the neck.",
+      "Deep neck flexor nods: supine, small chin nod without jutting, hold 5 seconds, 8 reps.",
+      "Scapular work: band row or prone T, light resistance, two sets of 10. Keep the ribs quiet.",
+      "Arm-pain position: use the repeated motion or supported position that eases the arm. Traction only if the PT plan includes it, and only if symptoms move toward the neck or ease.",
+      "Task practice: grade the desk, driving, or overhead time they need. Add minutes before you add load.",
+    ],
     progress: [
       "From pain-limited motion toward full motion under control",
       "Add load to neck endurance and scapular work",
@@ -161,6 +182,13 @@ const DIAGNOSES = [
       "Load the cuff and scapular muscles through a range that settles by the next day",
       "Practice the reach they actually need, with less shrug over time",
       "Tendons respond to progressive load, not to complete rest",
+    ],
+    options: [
+      "Isometric external rotation: stand, press the forearm into a wall, 5 holds of 20 seconds. Use this when reaching is very painful.",
+      "Side-lying external rotation: 0 to 3 pounds, two or three sets of 10, slow lower. Pain during the set is acceptable if it settles within a day and is not sharper the next day.",
+      "Scaption raise: thumb up, light, stop just short of the sharp painful arc. Two sets of 8.",
+      "Scapular row or band pull-apart: two sets of 10. Cue less shrug.",
+      "Needed reach: practice the shelf, belt, or hair motion they cannot do. Fewer shrugs each set.",
     ],
     progress: [
       "Increase load, then range, then speed",
@@ -207,6 +235,13 @@ const DIAGNOSES = [
       "Keep the elbow, wrist, and hand moving",
       "Coach sleep position and pacing",
     ],
+    options: [
+      "Painful freezing stage: pendulum and table slides, 1 to 2 minutes, several times a day. Stay in a comfortable range. Do not force a hard stretch.",
+      "External rotation: cane or doorway, three holds of 20 seconds, gentle. This is usually the stiffest motion. Stop if the shoulder flares into the next day.",
+      "Flexion: wall walk or supine cane flexion, 10 slow reps, only to the tolerable end.",
+      "Stiff stage: longer end-range holds, and joint mobilization only if the PT plan includes it and names the dose.",
+      "Keep the rest of the arm working: grip, elbow flexion, and wrist motion so the hand does not shut down.",
+    ],
     progress: [
       "Increase stretch intensity only when next-day pain is stable",
       "Track external rotation and overhead reach, not pain alone",
@@ -251,6 +286,13 @@ const DIAGNOSES = [
       "Walking or cycling at a dose they can repeat",
       "Practice the sit-to-stand and steps they avoid",
       "A cane in the opposite hand if it clearly helps them walk farther",
+    ],
+    options: [
+      "Sit-to-stand: from a height they control, two sets of 8. Lower the seat when the last reps stay clean.",
+      "Knee extension: terminal knee extension with a band, or a straight-leg raise if the band is too irritable. Two sets of 10.",
+      "Chair-tap squat: two sets of 8. Knees track over the toes. Stop at the height that settles by the next day.",
+      "Walk or cycle: start near 10 minutes if that dose is repeatable. Add minutes before speed.",
+      "Step-up: a 4 to 6 inch step, hand on a rail, two sets of 8, when sit-to-stand is already easy.",
     ],
     progress: [
       "Add resistance when form holds and next-day pain is acceptable",
@@ -297,6 +339,13 @@ const DIAGNOSES = [
       "Flexion in short, frequent bouts",
       "Swelling control with elevation, ankle pumps, and pacing",
     ],
+    options: [
+      "Heel prop: several short bouts, about 5 to 10 minutes total. No pillow under the knee. Measure extension each visit.",
+      "Quad set: 10 reps, hold 5 seconds. Add a short-arc quad only if the plan allows it and the lag is improving.",
+      "Heel slides: 10 reps inside the ordered flexion range. Record the number each visit.",
+      "Gait: ordered device, cue a heel strike and even step length. Cap the walk if the knee is much hotter or tighter the next morning.",
+      "Swelling: ankle pumps, 10 reps, then elevate. Ice only if the plan or surgeon allows it.",
+    ],
     progress: [
       "From assisted walking toward less support, then stairs with a rail",
       "From a quad set toward resisted extension and a functional squat",
@@ -341,6 +390,13 @@ const DIAGNOSES = [
       "Gait training with even steps and the correct device",
       "Hip abductor work inside the allowed range",
       "Teach the exact positions this surgeon wants avoided",
+    ],
+    options: [
+      "Transfer rehearsal: the exact sit, stand, and sleep position in the written precautions, repeated until they do it without a cue.",
+      "Gait: ordered device, even steps. Stop and reset if the leg rotates or crosses the limit.",
+      "Hip abduction: supine or standing, only inside the allowed range, two sets of 10.",
+      "Glute set and ankle pumps: 10 reps each. Skip bridging if extension or rotation is restricted.",
+      "Dressing and car transfer: the method in the plan. One hand on the back of the seat, the operated leg handled the way you practiced.",
     ],
     progress: [
       "Less device support when gait is steady and the surgeon allows it",
@@ -387,6 +443,13 @@ const DIAGNOSES = [
       "Ankle pumps and quad sets, then more strength as the order allows",
       "Practice the bathroom and chair they will actually use",
     ],
+    options: [
+      "Weight-bearing check: read the order out loud before the first stand. As tolerated, partial, toe-touch, or none. Do not guess.",
+      "Bed mobility and the bathroom transfer: least help that is still safe. Use the setup they will have at home.",
+      "Gait bouts: only at the allowed weight bearing, short walks, more than once in the day. Record distance, device, and help.",
+      "Bed exercises: ankle pumps and quad sets, 10 reps. Add a bridge or straight-leg raise only if the order allows that position.",
+      "Dizzy stand: sit at the edge of the bed first. If they gray out, sit them back down and tell the PT.",
+    ],
     progress: [
       "More distance and fewer rests before a harder device",
       "Less help, matched to what the next setting can provide",
@@ -431,6 +494,13 @@ const DIAGNOSES = [
       "Swelling control and comfortable up-and-down ankle motion",
       "Balance as soon as they can stand on that foot",
       "Fibularis and calf strength, then hop and cut only after single-leg control is solid",
+    ],
+    options: [
+      "Brace and walk: the distance they can do without a worse limp over the next hour. Record it.",
+      "Motion: ankle pumps and the alphabet. Stay out of a forced inversion stretch.",
+      "Heel raises: seated, then standing, two sets of 10, as soon as they can take weight.",
+      "Balance: single-leg stance at the counter, three holds of 20 seconds. Hover the hands only when 20 seconds is already steady.",
+      "Eversion band: two sets of 15 once a shoe fits. Hopping and cutting only after single-leg control is solid and the plan includes them.",
     ],
     progress: [
       "From two-foot balance to single-leg balance with head turns",
@@ -477,6 +547,13 @@ const DIAGNOSES = [
       "Shoulder support and positioning. No traction through the arm",
       "Train the helper on the transfer and on falls",
     ],
+    options: [
+      "Sit-to-stand: the help level in the plan. Cue weight onto the weaker leg. Never pull the weak arm.",
+      "The real transfer: same bed, chair, and helper setup they use on the unit. Practice it, then have the helper try it while you guard.",
+      "Gait bout: device and help from the plan. Rest before the foot scuffs or they lean hard. Record distance.",
+      "Shoulder: support it in the chair and during every transfer. Scapular movement only. No traction through the arm.",
+      "One family task: the transfer or the arm position in the chair, written in one sentence they can follow.",
+    ],
     progress: [
       "Less hands-on help, then a less restrictive device",
       "Longer walks, with rest before form becomes unsafe",
@@ -521,6 +598,13 @@ const DIAGNOSES = [
       "The cue that works for this person: a line, a beat, or one short verbal cue",
       "Turn by stopping, widening the base, then stepping",
       "Guarded balance and strength, with a plan for the off state",
+    ],
+    options: [
+      "Big sit-to-stand: during the on state, 8 to 10 high-effort reps. Watch the size of the movement, not just the count.",
+      "Cued walk: high steps to a taped line or a metronome, whichever cue works for this person. Guard closely.",
+      "Turn drill: stop, widen the feet, then step. Practice it in a doorway, not as a pivot.",
+      "Freezing: stop, shift weight side to side, step over a line. Do not pull them forward.",
+      "Off-state plan: if they are off or lightheaded, sit them down. Skip hard balance and tell the PT if the off period blocks walking.",
     ],
     progress: [
       "Bigger steps and a taller posture before faster speed",
@@ -567,6 +651,13 @@ const DIAGNOSES = [
       "Gait that includes turns and a safe recovery step",
       "Shoes, lighting, and a device when it lowers risk",
     ],
+    options: [
+      "Strength pair: sit-to-stand and heel raises at the counter, two sets of 8.",
+      "Stance: feet together, hands on the counter, three holds of 20 seconds. Hover the hands only after that hold is steady.",
+      "Recovery step: a small guarded nudge, cue a step instead of a reach. Stay close enough to catch them.",
+      "Gait with turns: a clear hallway, include one turn each length. Keep the device if it stops a scuff.",
+      "One hazard: agree on a night light, a moved cord, or shoes with a back. Write down which one.",
+    ],
     progress: [
       "Narrow the base, add head turns, then a softer surface",
       "Take the hand away only when they can recover a nudge",
@@ -611,6 +702,13 @@ const DIAGNOSES = [
       "Several short sessions in a day",
       "Simple leg strength in bed or the chair until standing lasts longer",
       "Upright posture and breathing control if the lungs are part of the illness",
+    ],
+    options: [
+      "Sitting ladder: dangle at the edge of the bed, then a chair. Write the minutes. Stand only if the ordered vitals allow it.",
+      "Leg priming: ankle pumps and seated marches, 1 to 2 minutes, before the first stand.",
+      "Walk bout: the distance they can finish with oxygen, heart rate, and pressure still inside the order. Several short bouts beat one long push.",
+      "Breathing: upright sitting, slow breaths, if the lungs are part of the illness. Stop for chest pain or oxygen below the ordered number.",
+      "The next real task: the bathroom or the chair they will use on the next unit. Practice that, not a harder drill.",
     ],
     progress: [
       "Add minutes of sitting or walking before you add speed",

@@ -51,13 +51,15 @@ html, body {
 .mark {
   display: grid;
   place-items: center;
-  width: 2.6rem;
+  min-width: 2.6rem;
   height: 2.6rem;
+  padding: 0 0.45rem;
   border-radius: 0.55rem;
   background: var(--teal);
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.04em;
+  font-size: 0.85rem;
 }
 
 .brand h1 {
@@ -280,6 +282,25 @@ html, body {
 
 .callout.warn h3 { color: var(--amber); }
 
+.options {
+  margin-top: 0.95rem;
+  border: 1px solid #c9e3df;
+  border-radius: 0.7rem;
+  padding: 0.7rem 0.9rem 0.85rem;
+  background: #f4faf9;
+}
+
+.options h3 { color: var(--teal-deep); }
+
+.options ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.options li { margin: 0.4rem 0; }
+
+.options strong { font-weight: 650; }
+
 .sections {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -357,7 +378,10 @@ html, body {
   .aliases { font-size: 9pt; }
 
   .callout,
-  .section { break-inside: avoid; }
+  .section,
+  .options li { break-inside: avoid; }
+
+  .options { margin-top: 6pt; padding: 4pt 8pt; }
 
   .callout { margin-top: 6pt; padding: 5pt 7pt; }
 
@@ -369,11 +393,13 @@ html, body {
 
   .callout li,
   .section li,
+  .options li,
   .fine-print,
   .snapshot { font-size: 8.5pt; line-height: 1.25; }
 
   .callout h3,
-  .section h3 { font-size: 7.5pt; margin-bottom: 1pt; }
+  .section h3,
+  .options h3 { font-size: 7.5pt; margin-bottom: 1pt; }
 
   .fine-print { margin-top: 6pt; }
 }
